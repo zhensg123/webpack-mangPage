@@ -58,11 +58,11 @@ module.exports = merge(baseWebpackConfig, {
         new webpack.NoEmitOnErrorsPlugin(),//即使有错误也不会中断
  
         // copy custom static assets
-        new CopyWebpackPlugin([{
-            from: path.resolve(__dirname, '../static'),
-            to: config.dev.assetsSubDirectory,
-            ignore: ['.*']
-        }]),
+        // new CopyWebpackPlugin([{
+        //     from: path.resolve(__dirname, '../static'),
+        //     to: config.dev.assetsSubDirectory,
+        //     ignore: ['.*']
+        // }]),
         //暴露全局变量,路径采用绝对路径
         new webpack.ProvidePlugin({
            Vue:path.join(__dirname,"../node_modules/vue/dist/vue.min.js")
